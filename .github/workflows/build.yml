@@ -53,7 +53,7 @@ jobs:
             --fill-flash-size 4MB \
             0x1000 bootloader.bin 0x8000 partitions.bin \
             0xe000 boot_app0.bin 0x10000 firmware.bin
-          esptool.py image_info --chip esp32 firmware.bin
+                    esptool.py image_info firmware.bin
           cat > README.txt <<'EOF'
           1. Erase flash first (optional but recommended)
           2. Flash ONLY merged_4MB.bin at offset 0x0
